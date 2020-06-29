@@ -65,7 +65,7 @@ ol, ul {
 }
 
 .cardlist{
-  list-style: inherit;
+  list-style: circle;
   padding: 0;
   padding-left: 1.5em;
 }
