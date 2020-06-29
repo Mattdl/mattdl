@@ -73,8 +73,8 @@
 				<!-- End Header Area -->				
 			<div class="container">
 				<div class="row justify-content-start align-items-center">
-					<div class="col-lg-6 col-md-12 no-padding banner-right">
-						<img class="img-fluid" src="img/header-img_mirror_medprint.png" style="height: 450px;" alt="">
+					<div class="col-lg-6 col-md-12 no-padding">
+						<img class="img-fluid" src="img/header-img_mirror_medprint.png" style="height: 400px;" alt="">
 					</div>						
 					<div class="col-lg-6 col-md-12 banner-left">
 						<h1 class="text-white">
@@ -98,10 +98,11 @@
 				<div class="social-banner">
 					<div class="underline"></div>             
 					<ul class="social_links">
-						<li class="university animated bounceIn wow delay-02s animated animated" style="visibility: visible; animation-name: bounceIn;"><a href="https://www.kuleuven.be/wieiswie/nl/person/00124577"><i class="fa fa-university"></i></a></li>
-						<li class="github animated bounceIn wow delay-03s animated animated" style="visibility: visible; animation-name: bounceIn;"><a href="https://github.com/Mattdl"><i class="fa fa-github"></i></a></li>
-						<li class="linkedin animated bounceIn wow delay-04s animated animated" style="visibility: visible; animation-name: bounceIn;"><a href="https://www.linkedin.com/in/matthias-de-lange-141925154/"><i class="fa fa-linkedin"></i></a></li>
-						<li class="gscholar animated bounceIn wow delay-05s animated animated" style="visibility: visible; animation-name: bounceIn;"><a href="https://scholar.google.be/citations?user=ALlIxw8AAAAJ"><i class="fa fa-graduation-cap"></i></a></li> 
+						<li class="university animated bounceIn wow delay-02s animated animated" style="visibility: visible; animation-name: bounceIn;"><a title="KU Leuven" href="https://www.kuleuven.be/wieiswie/nl/person/00124577"><i class="fa fa-university"></i></a></li>
+						<li class="github animated bounceIn wow delay-03s animated animated" style="visibility: visible; animation-name: bounceIn;"><a title="Github" href="https://github.com/Mattdl"><i class="fa fa-github"></i></a></li>
+						<li class="twitter animated bounceIn wow delay-04s animated animated" style="visibility: visible; animation-name: bounceIn;"><a title="Twitter" href="https://twitter.com/MatthiasDeLange"><i class="fa fa-twitter"></i></a></li>
+						<li class="linkedin animated bounceIn wow delay-05s animated animated" style="visibility: visible; animation-name: bounceIn;"><a title="LinkedIn" href="https://www.linkedin.com/in/matthias-de-lange-141925154/"><i class="fa fa-linkedin"></i></a></li>
+						<li class="gscholar animated bounceIn wow delay-06s animated animated" style="visibility: visible; animation-name: bounceIn;"><a title="Google Scholar" href="https://scholar.google.be/citations?user=ALlIxw8AAAAJ"><i class="fa fa-graduation-cap"></i></a></li> 
 					</ul> 
 				</div>
 			</div>
@@ -138,11 +139,14 @@
 								</h6>
 								<!-- Abstract -->
 								<a href="#" class="card-link-bottom" data-toggle="collapse" data-target="#collapse2" 			aria-expanded="false" aria-controls="collapse2">
-										[Abstract]
+										[Summary]
 								</a>
 								<div class="collapse" id="collapse2">
 									<p>
-										This work investigates the task of unsupervised model personalization, adapted to continually evolving, unlabeled local user images. We consider the practical scenario where a high capacity server interacts with a myriad of resource-limited edge devices, imposing strong requirements on scalability and local data privacy. We aim to address this challenge within the continual learning paradigm and provide a novel Dual User-Adaptation framework (DUA) to explore the problem. This framework flexibly disentangles user-adaptation into model personalization on the server and local data regularization on the user device, with desirable properties regarding scalability and privacy constraints. First, on the server, we introduce incremental learning of task-specific expert models, subsequently aggregated using a concealed unsupervised user prior. Aggregation avoids retraining, whereas the user prior conceals sensitive raw user data, and grants unsupervised adaptation. Second, local user-adaptation incorporates a domain adaptation point of view, adapting regularizing batch normalization parameters to the user data. We explore various empirical user configurations with different priors in categories and a tenfold of transforms for MIT Indoor Scene recognition, and classify numbers in a combined MNIST and SVHN setup. Extensive experiments yield promising results for data-driven local adaptation and elicit user priors for server adaptation to depend on the model rather than user data. Hence, although user-adaptation remains a challenging open problem, the DUA framework formalizes a principled foundation for personalizing both on server and user device, while maintaining privacy and scalability.
+										Personalization of models to local user images is prone to three main problems: scalability towards thousands of users, retaining user-privacy, and labeling local user data. Our Dual User-Adaptation framework (DUA) unveils a novel perspective to tackle all of these practical concerns and enables personalization on both the server and local user edge-device.
+ 
+										First, we train a sequence of task-specific models on the server, making the number of models independent of the user-count to greatly enhance scalability. These models are aggregated into a single personalized model solely based on user-specific priors. As a consequence, no sensitive user data is shared and using parameter importance avoids the need for labeled user data. Additionally, the DUA framework invigorates a second round of user-data adaptation, but now locally on the user edge-device. Therefore, DUA manifests two personalization opportunities without sharing any explicit user data.
+										Code and benchmarks are publicly available online. 
 									</p>
 								</div>
 								<!-- Img -->
@@ -154,6 +158,16 @@
 									<a href="http://openaccess.thecvf.com/content_CVPR_2020/html/De_Lange_Unsupervised_Model_Personalization_While_Preserving_Privacy_and_Scalability_An_Open_CVPR_2020_paper.html" class="card-link">Paper</a>
 									<a href="https://github.com/Mattdl/DUA" class="card-link">Code</a>
 								</p>
+								<!-- <p class="card-text">  -->
+									<b>Presented at</b>
+									<ul class="cardlist">
+										<li>CVPR 2020. <a href="extra/2020_DUA/10148-slides.pdf" class="card-link">Slides</a></li>
+										<li>"Image and Speech Processing" seminar in Center of Speech and Image Processing (PSI). <a href="extra/Slides_DUA_ContinualAI.pdf" class="card-link">Slides</a></li>
+										<li>June 2020 ContinualAI meetup: "Continual Learning: in the Cloud, at the Edge or Both?" <a href="extra/2020_DUA/Slides_DUA_ContinualAI.pdf" class="card-link">Slides</a>
+										<a href="https://www.youtube.com/watch?v=69uajJwFyzM" class="card-link">Video</a></li>
+									</ul>
+								<!-- </p> -->
+							</p>
 							</div>
 						</div>
 						<!-- End of Entry -->
@@ -327,6 +341,7 @@
 								<div class="footer-social align-items-center text-center">
 									<a id="fadebutton" href="https://github.com/Mattdl"><i class="fa fa-github"></i></a>
 									<a id="fadebutton" href="https://www.linkedin.com/in/matthias-de-lange-141925154/"><i class="fa fa-linkedin"></i></a>
+									<a id="fadebutton" href="https://twitter.com/MatthiasDeLange"><i class="fa fa-twitter"></i></a>
 									<a id="fadebutton" href="https://scholar.google.be/citations?user=ALlIxw8AAAAJ"><i class="fa fa-graduation-cap"></i></a>
 								</div>
 							</div>

@@ -1,0 +1,5 @@
+Personalization of models to local user images is prone to three main problems: scalability towards thousands of users, retaining user-privacy, and labeling local user data. Our Dual User-Adaptation framework (DUA) unveils a novel perspective to tackle all of these practical concerns and enables personalization on both the server and local user edge-device.
+ 
+First, we train a sequence of task-specific models on the server, making the number of models independent of the user-count to greatly enhance scalability. These models are aggregated into a single personalized model solely based on user-specific priors. As a consequence, no sensitive user data is shared and using parameter importance avoids the need for labeled user data. Additionally, the DUA framework invigorates a second round of user-data adaptation, but now locally on the user edge-device. Therefore, DUA manifests two personalization opportunities without sharing any explicit user data.
+Code and benchmarks are publicly available online. 
+

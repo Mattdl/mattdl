@@ -64,6 +64,12 @@ ol, ul {
   list-style: none;
 }
 
+.cardlist{
+  list-style: inherit;
+  padding: 0;
+  padding-left: 1.5em;
+}
+
 select {
   display: block;
 }
