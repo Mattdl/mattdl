@@ -131,7 +131,7 @@
 							<div class="card-body">
 								<!-- Submitted where + when -->
 								<h5 class="card-subtitle mb-2 text-muted">
-									2020 ~ NeurIPS submission
+									2021 ~ ICLR submission
 								</h5>
 								<!-- Title -->
 								<h6 class="card-title" style="color: black">
@@ -143,20 +143,7 @@
 								</a>
 								<div class="collapse" id="collapse1">
 									<p>
-										As learning from non-stationary streams of data has been proven a challenging
-										endeavour, current continual learners often strongly relax the problem,
-										assuming balanced datasets, unlimited processing of data stream subsets, and
-										additional availability of task information, sometimes even during inference.
-										In contrast, our continual learner processes the data streams in an online
-										fashion, without additional task-information, and shows solid robustness to
-										imbalanced data streams resembling a real-world setting. Defying such
-										challenging settings is achieved by aggregating prototypes and
-										nearest-neighbour based classification in a shared latent space, where a
-										Continual Prototype Evolution (CoPE) enables learning and prediction at any
-										point in time. As the embedding network continually changes, prototypes
-										inevitably become obsolete, which we prevent by replay of exemplars from
-										memory. We obtain state-of-the-art performance by a significant margin on five
-										benchmarks, including two highly unbalanced data streams.									
+										Attaining prototypical features to represent class distributions is well established in representation learning. However, learning prototypes online from streams of data proves a challenging endeavor as they rapidly become outdated, caused by an ever-changing parameter space in the learning process. Additionally, continual learning assumes a non-stationary nature of the data stream, typically resulting in catastrophic forgetting of previous knowledge. As a first, we introduce a system addressing both problems, where prototypes evolve continually in a shared latent space, enabling learning and prediction at any point in time. In contrast to the major body of work in continual learning, data streams are processed in an online fashion, without additional task-information, and an efficient memory scheme provides robustness to imbalanced data streams. Besides nearest neighbor based prediction, learning is facilitated by a novel objective function, encouraging cluster density about the class prototype and increased inter-class variance. Furthermore, the latent space quality is elevated by pseudo-prototypes in each batch, constituted by replay of exemplars from memory. We generalize the existing paradigms in continual learning to incorporate data incremental learning from data streams by formalizing a two-agent learner-evaluator framework, and obtain state-of-the-art performance by a significant margin on eight benchmarks, including three highly imbalanced data streams.								
 									</p>
 								</div>
 								<!-- Img -->
@@ -247,7 +234,7 @@
 											Matthias De Lange, Rahaf Aljundi, Marc Masana, Sarah Parisot, Xu Jia, Ales Leonardis, Gregory Slabaugh, Tinne Tuytelaars submission at TPAMI journal.								
 										</br>
 										<a href="https://arxiv.org/abs/1909.08383" class="card-link">Paper</a>
-										<a href="#" class="card-link">Code</a>
+										<a href="https://github.com/Mattdl/CLsurvey" class="card-link">Code</a>
 									</p>
 								</div>
 							</div>
